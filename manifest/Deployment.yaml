@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app-event-simulator
+  name: app-event-simulator
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: app-event-simulator
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: app-event-simulator
+    spec:
+      containers:
+      - image: ghcr.io/wiktorvip/app-event-simulator1.0
+        name: app-event-simulator
+        ports:
+          - containerPort: 9090
+
