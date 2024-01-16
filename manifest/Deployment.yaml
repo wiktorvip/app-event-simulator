@@ -5,7 +5,7 @@ metadata:
     app: app-event-simulator
   name: app-event-simulator
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: app-event-simulator
@@ -16,7 +16,7 @@ spec:
         app: app-event-simulator
     spec:
       containers:
-      - image: ghcr.io/wiktorvip/app-event-simulator1.0
+      - image: ghcr.io/wiktorvip/app-event-simulator:1.0
         name: app-event-simulator
         ports:
           - containerPort: 9090
