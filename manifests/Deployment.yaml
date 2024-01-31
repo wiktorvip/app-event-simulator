@@ -20,4 +20,3 @@ spec:
         name: app-event-simulator
         ports:
           - containerPort: 9090
-
